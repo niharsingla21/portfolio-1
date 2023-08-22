@@ -1,0 +1,26 @@
+.fixed {
+    position: fixed;
+}
+
+.height {
+    height: 50px;
+}
+
+.app-header {
+    background-color: #313236 !important;
+    display: flex;
+    color: white !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    height: 8vh;
+}
+
+.header-paper {
+    width: 100%;
+    background-color: inherit;
+    color: inherit;
+    height: 100%;
+    display: flex;
+}

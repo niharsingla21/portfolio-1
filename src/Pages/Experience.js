@@ -1,3 +1,4 @@
+import '../css/App.css';
 import AppHeader from "../components/AppHeader";
 import Footer from "../components/Footer";
 import {Typography} from "@mui/material";

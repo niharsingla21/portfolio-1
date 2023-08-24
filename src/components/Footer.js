@@ -1,5 +1,9 @@
+import '../css/Footer.css';
+import Paper from "@mui/material/Paper";
+
 export default function Footer() {
     return (
-        <div>Footer</div>
+        <Paper className="app-footer">
+        </Paper>
     )
 }

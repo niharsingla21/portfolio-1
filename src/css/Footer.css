@@ -1,12 +1,10 @@
-.fixed {
+.app-footer {
+    height: 8vh;
     position: fixed;
-}
-
-.height {
-    height: 50px;
-}
-
-.app-header {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    top:auto;
     background-color: #313236 !important;
     display: flex;
     color: white !important;
@@ -14,14 +12,4 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    height: 8vh;
-    position: fixed;
-}
-
-.header-paper {
-    width: 100%;
-    background-color: inherit;
-    color: inherit;
-    height: 100%;
-    display: flex;
 }

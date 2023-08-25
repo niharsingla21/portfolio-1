@@ -14,14 +14,17 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    height: 8vh;
+    height: 5vh;
     position: fixed;
+    top:0;
+    left:0;
+    right:0;
 }
 
 .header-paper {
     width: 100%;
     background-color: inherit;
     color: inherit;
-    height: 100%;
+    height: inherit;
     display: flex;
 }

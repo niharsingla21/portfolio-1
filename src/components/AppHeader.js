@@ -1,3 +1,4 @@
+import '../css/header.css';
 import AppBar from '@mui/material/AppBar';
 import {Button, Typography} from "@mui/material";
 import Paper from "@mui/material/Paper";
@@ -9,9 +10,8 @@ export default function AppHeader() {
         navigate(`/${page}`)
     }
     return (
-        <AppBar className="app-header" style={{backgroundColor: '#313236', color: 'white'}}>
-            <Paper elevation={1} className="header-paper"
-                   style={{display: "flex", backgroundColor: "inherit", color: 'inherit'}}>
+        <AppBar className="app-header">
+            <Paper elevation={0} className="header-paper">
                 <div style={{
                     display: "flex",
                     justifyContent: "space-around",

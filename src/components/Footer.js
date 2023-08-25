@@ -1,4 +1,4 @@
-import '../css/Footer.css';
+import '../css/footer.css';
 import Paper from "@mui/material/Paper";
 
 export default function Footer() {

@@ -1,13 +1,10 @@
 import '../css/app.css';
 import '../css/body.css';
-import AppHeader from "../components/AppHeader";
-import Footer from "../components/Footer";
-import {Typography} from "@mui/material";
 import BasePage from "../components/BasePage";
 
 export default function AboutMe() {
     return (
-        <BasePage pageContent={"About Me"}></BasePage>
+        <BasePage pageContent={"About Me"}/>
         // <div className="App">
         //     <AppHeader/>
         //     <body className="body">

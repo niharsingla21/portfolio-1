@@ -1,5 +1,3 @@
-import '../css/app.css';
-import '../css/body.css';
 import BasePage from "../components/BasePage";
 
 export default function AboutMe() {

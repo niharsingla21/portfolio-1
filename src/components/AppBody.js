@@ -4,10 +4,7 @@ import '../css/body.css';
 export default function AppBody(props) {
     return (
         <body className="body">
-        <Paper style={{
-            backgroundColor: "black",
-            color: "white"
-        }}>{props.pageContent}</Paper>
+        <Paper className="body-paper">{props.pageContent}</Paper>
         </body>
     )
 }

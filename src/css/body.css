@@ -3,3 +3,10 @@
     height:90vh;
     margin-bottom: 5vh;
 }
+
+.body-paper {
+    background-color: black !important;
+    color: white !important;
+    height:100%;
+    border-radius: 0 !important;
+}

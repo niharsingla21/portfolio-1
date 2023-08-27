@@ -23,8 +23,8 @@
 
 .header-paper {
     width: 100%;
-    background-color: inherit;
-    color: inherit;
+    background-color: inherit !important;
+    color: inherit !important;
     height: inherit;
     display: flex;
 }

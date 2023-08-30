@@ -7,7 +7,7 @@ export default function BasePage(props) {
     return (
         <div className="App">
             <AppHeader/>
-            <AppBody pageContent={props.pageContent}/>
+            <AppBody bgColor={props.bgColor} pageContent={props.pageContent}/>
             <Footer/>
         </div>
     )

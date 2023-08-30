@@ -1,25 +1,40 @@
 import BasePage from "../components/BasePage";
-import {Container} from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2";
+import {Box, Container, Grid} from "@mui/material";
 
 export default function Experience() {
 
     const test = () => {
         return (
-            <Container maxWidth={"lg"}>
-                <Grid2 container rowSpacing="3" columnSpacing="2">
-                    <Grid2 container xs="8" md="8">Timeline</Grid2>
-                    <Grid2 container xs="8" md="8">
-                        <Grid2 item>Exp 1</Grid2>
-                        <Grid2 item>Exp 2</Grid2>
-                        <Grid2 item>Exp 3</Grid2>
-                        <Grid2 item>Exp 4</Grid2>
-                    </Grid2>
-                </Grid2>
+            <Container maxWidth={"lg"} style={{
+                height:"100%"
+            }}>
+                <Grid container height="100%" maxWidth="100%" maxHeight="100%">
+                    <Grid container item xs="3" md="4" lg="4" height="100%" width="100%" padding="20px 20px 20px 20px">
+                        <Box style={{
+                            outline: `1px solid white`,
+                            height:"100%",
+                            width:"100%"
+                        }}>
+                            TIMELINE
+                        </Box>
+                    </Grid  >
+                    <Grid container item xs="9" md="8" lg="8" height="100%" width="100%">
+                        <Box style={{
+                            outline: `2px solid white`,
+                            height:"100%",
+                            width:"100%"
+                        }}>
+                            <Grid item>Exp 1</Grid>
+                            <Grid item>Exp 2</Grid>
+                            <Grid item>Exp 3</Grid>
+                            <Grid item>Exp 4</Grid>
+                        </Box>
+                    </Grid>
+                </Grid>
             </Container>
         )
     }
     return (
-        <BasePage pageContent={test()}/>
+        <BasePage bgColor="#313236" pageContent={test()}/>
     )
 }

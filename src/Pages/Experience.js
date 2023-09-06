@@ -1,7 +1,14 @@
 import BasePage from "../components/BasePage";
-import {Box, Container, Grid} from "@mui/material";
+import {Box, Container, Grid, Typography} from "@mui/material";
 import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator} from "@mui/lab";
-import TimelineContext from "@mui/lab/Timeline/TimelineContext";
+
+const switchYears = [
+    2022,
+    2019,
+    2017,
+    2015,
+    2015
+]
 
 export default function Experience() {
 
@@ -19,47 +26,48 @@ export default function Experience() {
                             borderRadius: "10px"
                         }}>
                             <Box style={{
-                                height: "-webkit-fill-available",
+                                height: "94%",
                                 margin: "10px",
                                 padding: "15px"
                             }}>
-                                <Timeline position="alternate">
-                                    <TimelineItem>
-                                        <TimelineSeparator>
-                                            <TimelineDot/>
-                                            <TimelineConnector/>
-                                        </TimelineSeparator>
-                                        <TimelineContent>
-                                            2022
-                                        </TimelineContent>
-                                    </TimelineItem>
-                                    <TimelineItem>
-                                        <TimelineSeparator>
-                                            <TimelineDot/>
-                                            <TimelineConnector/>
-                                        </TimelineSeparator>
-                                        <TimelineContent>
-                                            2017
-                                        </TimelineContent>
-                                    </TimelineItem>
-                                    <TimelineItem>
-                                        <TimelineSeparator>
-                                            <TimelineDot/>
-                                            <TimelineConnector/>
-                                        </TimelineSeparator>
-                                        <TimelineContent>
-                                            2015
-                                        </TimelineContent>
-                                    </TimelineItem>
-                                    <TimelineItem>
-                                        <TimelineSeparator>
-                                            <TimelineDot/>
-                                        </TimelineSeparator>
-                                        <TimelineContent>
-                                            2015
-                                        </TimelineContent>
-                                    </TimelineItem>
-
+                                <Box style={{
+                                    height: "4%",
+                                    display:"flex",
+                                    flexDirection:"column",
+                                    justifyContent:"flex-end"
+                                }}>
+                                    <Typography variant="h6" fontFamily="monospace">
+                                        Present
+                                    </Typography>
+                                </Box>
+                                <Timeline position="alternate" style={{
+                                    height: "inherit",
+                                    margin: "0"
+                                }}>
+                                    {switchYears.map(switchYear => {
+                                        return (
+                                            <TimelineItem style={{
+                                                height: "25%"
+                                            }}>
+                                                <TimelineSeparator>
+                                                    <TimelineConnector/>
+                                                    <TimelineDot/>
+                                                </TimelineSeparator>
+                                                <TimelineContent style={{
+                                                    display:"flex",
+                                                    alignItems:"flex-end",
+                                                    justifyContent:"center"
+                                                }}>
+                                                    <Typography style={{
+                                                        fontSize:"x-large",
+                                                        fontFamily:"monospace"
+                                                    }}>
+                                                        {switchYear}
+                                                    </Typography>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                        )
+                                    })}
                                 </Timeline>
                             </Box>
                         </Box>

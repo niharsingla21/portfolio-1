@@ -1,10 +1,10 @@
 import {createBrowserRouter} from "react-router-dom";
-import Home from "../Pages/Home";
-import AboutMe from "../Pages/AboutMe";
-import ContactMe from "../Pages/ContactMe";
-import Experience from "../Pages/Experience";
-import Skills from "../Pages/Skills";
-import NotFound from "../Pages/NotFound";
+import Home from "../pages/Home";
+import AboutMe from "../pages/AboutMe";
+import ContactMe from "../pages/ContactMe";
+import Experience from "../pages/Experience";
+import Skills from "../pages/Skills";
+import NotFound from "../pages/NotFound";
 
 export const router = createBrowserRouter([
     {

@@ -1,0 +1,15 @@
+{
+  "year": 2022,
+  "company": "Measured",
+  "title": "Software Engineer III",
+  "start": "02-2022",
+  "end": "",
+  "description": [
+    "Been an individual contributor in my project i.e. writing new and maintaining old code, designing backend architecture, queries and DB tables.",
+    "Implemented a new process which streamlined all logs and alerts.",
+    "Eliminated common pitfalls by stressing more on unit tests to increase overall code coverage, and improved functionality coverage.",
+    "Also maintained more than 80% code coverage.",
+    "Been working on CI-CD pipelines, Jenkins jobs, and SONAR and comfortable in writing CI-CD pipelines.",
+    "Adapted to a fast-paced environment where code commits are done hourly and the feature flags are heavily used."
+  ]
+}

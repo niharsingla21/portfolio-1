@@ -1,0 +1,16 @@
+{
+  "year": 2019,
+  "company": "Mercer-Mettl",
+  "title": "Software Development Engineer II",
+  "start": "12-2019",
+  "end": "02-2022",
+  "description": [
+    "Implemented circuit-breaker in services to provide fault tolerance. It improved the system's overall resilience by isolating the failing services and stopping the cascading effect of failures.",
+    "Made a couple of applications fail-safe by 90%.",
+    "Designed and developed email flow using Amazon SES which had 0% tolerance for bounce emails.",
+    "Proficient in creating spring boot applications.",
+    "Integrated our services with COWIN APIs to provide vaccine availability notifications to the candidates. 80% of candidates found that helpful.",
+    "Contributor to Daily scrum, sprint planning, and retrospective meetings with QA, Product team, and Business Head.",
+    "Involved in analysing business requirements and validation rules and closely working with clients to understand their requirements."
+  ]
+}

@@ -37,7 +37,7 @@ export default function Experience() {
         }
     }
 
-    const test = () => {
+    const getPageContent = () => {
         return (
             <Container maxWidth={"lg"} className="height-100">
                 <Grid container height="100%" maxWidth="100%" maxHeight="100%">
@@ -93,6 +93,6 @@ export default function Experience() {
         )
     }
     return (
-        <BasePage bgColor="#313236" pageContent={test()}/>
+        <BasePage bgColor="#313236" pageContent={getPageContent()}/>
     )
 }

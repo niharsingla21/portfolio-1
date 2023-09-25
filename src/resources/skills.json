@@ -1,0 +1,34 @@
+{
+  "data": {
+    "Languages": [
+      "Java",
+      "Kotlin",
+      "Javascript",
+      "NodeJS",
+      "ReactJS",
+      "HTML",
+      "CSS"
+    ],
+    "Cloud-&-Resources": [
+      "AWS",
+      "Cloudwatch",
+      "ECS",
+      "EC2",
+      "SQS",
+      "SNS",
+      "S3",
+      "Lambda",
+      "Secrets Manager",
+      "ECR"
+    ],
+    "Databases": [
+      "MySQL",
+      "PostgreSQL",
+      "Mongo",
+      "DynamoDB",
+      "Redshift",
+      "Elastic Search",
+      "Redis"
+    ]
+  }
+}

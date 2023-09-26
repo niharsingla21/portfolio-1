@@ -1,8 +1,18 @@
 import BasePage from "../components/BasePage";
-import {Container, Grid} from "@mui/material";
+import {Container, Grid, styled} from "@mui/material";
 import {Masonry} from "@mui/lab";
+import skills from "../resources/skills.json";
+import Paper from "@mui/material/Paper";
 
 export default function Skills() {
+
+    const Item = styled(Paper)(({ theme }) => ({
+        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+        ...theme.typography.body2,
+        padding: theme.spacing(0.5),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+    }));
 
     const getPageContent = () => {
         return (
@@ -15,8 +25,8 @@ export default function Skills() {
                         defaultColumns={4}
                         defaultSpacing={1}
                     >
-                        {skills.map((height, index) => (
-                            <Item key={index} sx={{ height }}>
+                        {skills.data.map((skillHeader, index) => (
+                            <Item key={index}>
                                 {index + 1}
                             </Item>
                         ))}

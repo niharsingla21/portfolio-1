@@ -1,18 +1,28 @@
 import BasePage from "../components/BasePage";
-import {Container, Grid, styled} from "@mui/material";
+import {Chip, Container, Grid, styled} from "@mui/material";
 import {Masonry} from "@mui/lab";
 import skills from "../resources/skills.json";
 import Paper from "@mui/material/Paper";
 
 export default function Skills() {
 
-    const Item = styled(Paper)(({ theme }) => ({
+    const Item = styled(Paper)(({theme}) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
         padding: theme.spacing(0.5),
         textAlign: 'center',
         color: theme.palette.text.secondary,
     }));
+
+    function getSkills() {
+        return (
+            JSON.parse(skills.data).forEach(skillheader => {
+                return (
+                    <Item>{skillheader}</Item>
+                )
+            })
+        )
+    }
 
     const getPageContent = () => {
         return (
@@ -25,17 +35,13 @@ export default function Skills() {
                         defaultColumns={4}
                         defaultSpacing={1}
                     >
-                        {skills.data.map((skillHeader, index) => (
-                            <Item key={index}>
-                                {index + 1}
-                            </Item>
-                        ))}
+                        {() => getSkills()}
                     </Masonry>
                 </Grid>
             </Container>
         )
     }
     return (
-        <BasePage pageContent={getPageContent()}/>
+        <BasePage bgColor="#313236" pageContent={getPageContent()}/>
     )
 }

@@ -1,7 +1,8 @@
 import BasePage from "../components/BasePage";
-import {Chip, Container, Grid, styled} from "@mui/material";
+import {Chip, Container, Grid, styled, Typography} from "@mui/material";
 import {Masonry} from "@mui/lab";
 import skills from "../resources/skills.json";
+import skills2 from "../resources/skills2.json";
 import Paper from "@mui/material/Paper";
 
 export default function Skills() {
@@ -16,11 +17,9 @@ export default function Skills() {
 
     function getSkills() {
         return (
-            JSON.parse(skills.data).forEach(skillheader => {
-                return (
-                    <Item>{skillheader}</Item>
-                )
-            })
+            skills.data.map(skill => (
+                <Typography>{skill}</Typography>
+            ))
         )
     }
 
@@ -35,7 +34,14 @@ export default function Skills() {
                         defaultColumns={4}
                         defaultSpacing={1}
                     >
-                        {() => getSkills()}
+                        {Object.keys(skills.data).map(skillHeader => (
+                            skills.data[skillHeader].map(skill => {
+                                return (
+                                    <Typography>{skill}</Typography>
+                                )
+                            })
+
+                        ))}
                     </Masonry>
                 </Grid>
             </Container>

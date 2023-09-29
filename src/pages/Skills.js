@@ -1,24 +1,19 @@
 import BasePage from "../components/BasePage";
 import {Chip, Container, Grid, styled, Typography} from "@mui/material";
 import {Masonry} from "@mui/lab";
-import skills from "../resources/skills.json";
-import skills2 from "../resources/skills2.json";
-import Paper from "@mui/material/Paper";
+import skills from "../resources/skills.json";;
 
 export default function Skills() {
 
-    const Item = styled(Paper)(({theme}) => ({
-        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-        ...theme.typography.body2,
-        padding: theme.spacing(0.5),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    }));
-
     function getSkills() {
         return (
-            skills.data.map(skill => (
-                <Typography>{skill}</Typography>
+            Object.keys(skills.data).map(skillHeader => (
+                skills.data[skillHeader].map(skill => {
+                    return (
+                        <Chip label={skill} variant="outlined"/>
+                    )
+                })
+
             ))
         )
     }
@@ -34,14 +29,7 @@ export default function Skills() {
                         defaultColumns={4}
                         defaultSpacing={1}
                     >
-                        {Object.keys(skills.data).map(skillHeader => (
-                            skills.data[skillHeader].map(skill => {
-                                return (
-                                    <Typography>{skill}</Typography>
-                                )
-                            })
-
-                        ))}
+                        {getSkills()}
                     </Masonry>
                 </Grid>
             </Container>

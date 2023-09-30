@@ -1,7 +1,9 @@
 import BasePage from "../components/BasePage";
 import {Chip, Container, Grid, styled, Typography} from "@mui/material";
 import {Masonry} from "@mui/lab";
-import skills from "../resources/skills.json";;
+import skills from "../resources/skills.json";
+
+;
 
 export default function Skills() {
 
@@ -10,7 +12,13 @@ export default function Skills() {
             Object.keys(skills.data).map(skillHeader => (
                 skills.data[skillHeader].map(skill => {
                     return (
-                        <Chip label={skill} variant="outlined"/>
+                        <Chip label={skill} variant="outlined" style={{
+                            backgroundColor: 'white',
+                            color: "black",
+                            fontWeight: "bold",
+                            height: "40px",
+                            width: "320px"
+                        }}/>
                     )
                 })
 
@@ -24,10 +32,15 @@ export default function Skills() {
                 <Grid container height="100%" maxWidth="100%" maxHeight="100%" padding="60px 20px">
                     <Masonry
                         columns={4}
-                        spacing={2}
+                        spacing={4}
                         defaultHeight={450}
                         defaultColumns={4}
                         defaultSpacing={1}
+                        style={{
+                            alignContent: "center",
+                            width: "inherit",
+                            paddingTop: "30px"
+                        }}
                     >
                         {getSkills()}
                     </Masonry>

@@ -1,5 +1,5 @@
 import BasePage from "../components/BasePage";
-import {Chip, Container, Grid, styled, Typography} from "@mui/material";
+import {Chip, Container, Grid} from "@mui/material";
 import {Masonry} from "@mui/lab";
 import skills from "../resources/skills.json";
 
@@ -9,10 +9,10 @@ export default function Skills() {
 
     function getSkills() {
         return (
-            Object.keys(skills.data).map(skillHeader => (
-                skills.data[skillHeader].map(skill => {
+            Object.keys(skills.data).map((skillHeader, outerIdx) => (
+                skills.data[skillHeader].map((skill, innerIdx) => {
                     return (
-                        <Chip label={skill} variant="outlined" style={{
+                        <Chip key={(innerIdx + 1) * (outerIdx + 1)} label={skill} variant="outlined" style={{
                             backgroundColor: 'white',
                             color: "black",
                             fontWeight: "bold",
